@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;500;700&display=swap');
+
+:root{
+    --color-primaria: #0A3871;
+    --color-secundaria: #495057;
+    --color-terciaria: #fff;
+    --color-botao: #D8DFE8;
+    --color-bg: #F3F5FC;
+    --color-houver-botao: #084f8b;
+    --color-houver-botao2: #aacbde;
+
+    --fonte: 'Inter', sans-serif;
+}
+
+*{
+    font-family: var(--fonte);
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-bg);
+    height: 100vh;
+}
+a:hover{
+    cursor: pointer;
+}
+
+.conteudo{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.conteudo__sectionPrincipal{
+    display: flex;
+    width: 70%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    margin: 2.5rem;
+}
+
+textarea{
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.conteudo__sectionPrincipal__caixaDeTexto,
+.conteudo__sectionPrincipal__avisoBotoes{
+    margin-left: 12rem;
+}
+.conteudo__sectionPrincipal__caixaDeTexto{
+    width: 60%;
+    border-radius: 0.5rem;
+}
+.conteudo__sectionPrincipal__caixaDeTexto::placeholder,.conteudo__sectionPrincipal__caixaDeTexto{
+    font-size: 2rem;
+    color: var(--color-primaria);
+    font-weight: 400;
+    background-color: var(--color-bg);
+    max-height: 31rem;   
+}
+
+.conteudo__sectionPrincipal__aviso{
+    display: flex;
+    gap: 0.5rem;
+    color: var(--color-secundaria);
+}
+
+.conteudo__sectionPrincipal__botoes{
+    display: flex;
+    gap: 2rem;
+}
+
+.conteudo__sectionPrincipal__botao1,
+.conteudo__sectionPrincipal__botao2,
+.conteudo__conteudoLateral__botao3{
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 35%;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.conteudo__sectionPrincipal__botao1{
+    color: var(--color-terciaria);
+    background-color: var(--color-primaria);
+}
+
+.conteudo__sectionPrincipal__botao2,
+.conteudo__conteudoLateral__botao3{
+    color: var(--color-primaria);
+    background-color: var(--color-botao);
+}
+
+.conteudo__sectionPrincipal__botao1:active {
+    background-color: var(--color-houver-botao);
+}
+  
+.conteudo__sectionPrincipal__botao2:active,
+.conteudo__conteudoLateral__botao3:active {
+    background-color: var(--color-houver-botao2);
+}
+
+.conteudoLateral{
+    display: flex;
+    width: 34%;
+    height: 90%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudoLateral__saida{
+    width: 27rem;
+    height: 80%;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+
+.conteudoLateral__imgText{
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    text-align: center;
+    width: 70%;
+}
+
+.conteudoLateral__img{
+    width: 100%;
+}
+
+.conteudoLateral__text__titulo{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.conteudoLateral__text__paragrafo{
+    color: var(--color-secundaria);
+    font-size: 1rem;
+    font-weight: 400; 
+}
+
+.conteudo__conteudoLateral__botao3{
+    visibility: hidden;
+    width: 2.5rem;
+}
+
+footer{
+    color: var(--color-terciaria);
+    background-color: var(--color-primaria);
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    .conteudo{
+        flex-direction: column;
+        height: 95%
+    }
+    .conteudo__sectionPrincipal{
+        width: 90%;
+    }
+    .conteudo__sectionPrincipal__caixaDeTexto,
+    .conteudo__sectionPrincipal__avisoBotoes{
+        margin-left: 2rem;
+        width: 100%;
+    }
+    .conteudo__sectionPrincipal__caixaDeTexto {
+        max-height: 11rem;
+    }
+    .conteudo__sectionPrincipal__botao1,
+    .conteudo__sectionPrincipal__botao2{
+        width: 50%;
+    }
+    .conteudoLateral,
+    .conteudoLateral__saida
+    {
+        width: 100%
+    }
+    .conteudoLateral__img{
+        display: none;
+    }
+    footer{
+        position: relative;
+    }
+}
+
+@media (max-width: 375px){
+    .conteudo__sectionPrincipal__caixaDeTexto,
+    .conteudo__sectionPrincipal__avisoBotoes{
+        margin: .5rem;
+    }
+    .conteudo__sectionPrincipal__caixaDeTexto {
+        max-height: 9.5rem;
+    }
+}
